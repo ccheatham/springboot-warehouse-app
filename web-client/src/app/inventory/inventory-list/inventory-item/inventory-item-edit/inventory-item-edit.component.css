@@ -1,0 +1,12 @@
+.title {
+  color: gold;
+}
+
+.form-buttons > * {
+  margin-left: 20px;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 2px solid red;
+}

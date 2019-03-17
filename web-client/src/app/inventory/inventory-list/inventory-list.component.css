@@ -1,0 +1,13 @@
+.inventory-title {
+  color: gold;
+}
+
+.instructions {
+ font-size: 18px;
+  color: seashell;
+}
+
+.instructions::before {
+  content: '* ';
+  color: red;
+}

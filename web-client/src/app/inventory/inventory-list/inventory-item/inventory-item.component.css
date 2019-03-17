@@ -1,0 +1,13 @@
+.row-icon {
+  margin-left: -25px;
+  width: 25px;
+  display: inline-flex;
+}
+
+.item-icon {
+  color: gold;
+}
+
+.item-icon.open {
+  margin-left: -1px;
+}

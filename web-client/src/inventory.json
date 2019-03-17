@@ -1,0 +1,32 @@
+{
+  "inventory": [
+    {
+      "itemNo": 1,
+      "name": "Pickle Corer",
+      "description": "Pickle Corer",
+      "itemCode": "PC100",
+      "amount": 1
+    },
+    {
+      "itemNo": 2,
+      "name": "Powder Sifter",
+      "description": "Powder Sifter",
+      "itemCode": "PS100",
+      "amount": 12
+    },
+    {
+      "itemNo": 3,
+      "name": "Rock Lifter Balloon",
+      "description": "Rock Lifter Balloon",
+      "itemCode": "RL100",
+      "amount": 60
+    },
+    {
+      "itemNo": 4,
+      "name": "Neck Clamp",
+      "description": "Neck Clamp",
+      "itemCode": "NC100",
+      "amount": 36
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+<div class="row" (mouseover)="showOptions=true" (mouseleave)="showOptions=false">
+  <div class="col-sm-4">
+    <div class="row-icon">
+      <div *ngIf="!showOptions">
+        <fa-icon [icon]="faBox" class="item-icon"></fa-icon>
+      </div>
+      <div *ngIf="showOptions">
+        <fa-icon [icon]="faBoxOpen" class="item-icon open"></fa-icon>
+      </div>
+    </div>
+    {{ inventoryItem.itemCode }}
+  </div>
+  <div class="col-sm-4">
+    {{ inventoryItem.name }}
+  </div>
+  <div class="col-sm-1">
+    {{ inventoryItem.amount }}
+  </div>
+</div>
+
+<div class="row" *ngIf="showEdit">
+  <div class="col-sm-12">
+    Edit me
+  </div>
+</div>

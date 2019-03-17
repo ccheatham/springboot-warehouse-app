@@ -1,0 +1,125 @@
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="title">Add/Edit Inventory Item</h2>
+        <div class="instructions">
+          All fields are required.
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-10">
+        <form (ngSubmit)="onEdit(f)" #f="ngForm">
+          <div class="row">
+            <div class="col-sm-8 form-group">
+              <input
+                type="hidden"
+                id="id"
+                class="form-control"
+                name="id"
+                ngModel
+                #id
+              >
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="ex. Widget for trimming tire rubber"
+                class="form-control"
+                name="name"
+                ngModel
+                required
+                (ngModelChange)="onNameChange($event)"
+              >
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3 form-group">
+              <label for="itemNo">Item Number</label>
+              <input
+                type="text"
+                id="itemNo"
+                class="form-control"
+                placeholder="ex. 10001"
+                name="itemNo"
+                ngModel
+                required
+              >
+            </div>
+            <div class="col-sm-3 form-group">
+              <label for="itemCode">Item Code</label>
+              <input
+                type="text"
+                id="itemCode"
+                placeholder="ex. SW-10001"
+                class="form-control"
+                name="itemCode"
+                required
+                ngModel
+              >
+            </div>
+            <div class="col-sm-2 form-group">
+              <label for="amount">Amount</label>
+              <input
+                type="number"
+                id="amount"
+                class="form-control"
+                name="amount"
+                placeholder="ex. 500"
+                ngModel
+                required
+                pattern="^[1-9]+[0-9]*$"
+              >
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8 form-group">
+              <label for="description">Description</label>
+              <textarea
+                type="text"
+                id="description"
+                class="form-control"
+                name="description"
+                placeholder="Brief description of what the item is for."
+                ngModel
+                required
+                rows="6"
+                cols="70"
+              ></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8 text-right form-buttons">
+              <button
+                class="btn btn-info btn-sm"
+                type="button"
+                (click)="onCancel()">
+                Cancel
+              </button>
+              <button
+                class="btn btn-danger btn-sm"
+                type="button"
+                *ngIf="editMode"
+                (click)="onDelete(id)">
+                Delete
+              </button>
+              <button
+                class="btn btn-success btn-sm"
+                type="submit"
+                [disabled]="!f.valid">{{ editMode ? 'Update' : 'Add' }}
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-2"></div>
+</div>

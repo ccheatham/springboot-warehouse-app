@@ -1,0 +1,4 @@
+/.idea
+/inventory-api/target
+node_modules
+/inventory-app.iml

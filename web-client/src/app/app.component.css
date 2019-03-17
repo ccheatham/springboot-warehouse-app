@@ -1,0 +1,16 @@
+.footer-override {
+  bottom: 35px !important;
+}
+
+.footer-link a {
+  color: white;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: orangered;
+}
+
+.footer-link a:hover {
+  color: gold;
+}
+
